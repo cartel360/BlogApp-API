@@ -12,6 +12,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 
 using BlogAPI.Services;
+using BlogAPI.Middeleware;
 
 using Microsoft.EntityFrameworkCore;
 
@@ -55,6 +56,8 @@ namespace BlogAPI
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseMiddleware<ApiKeyMiddleware>();
 
             app.UseEndpoints(endpoints =>
             {
