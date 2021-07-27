@@ -6,9 +6,11 @@ using Microsoft.AspNetCore.Mvc;
 
 using BlogAPI.Models;
 using BlogAPI.Services;
+using BlogAPI.Attributes;
 
 namespace BlogAPI.Controllers
 {
+    [ApiKey]
     [Route("api/[controller]")]
     [ApiController]
     public class BlogPostsController : ControllerBase

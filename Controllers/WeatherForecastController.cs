@@ -5,8 +5,12 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
+using BlogAPI.Attributes;
+
 namespace BlogAPI.Controllers
 {
+    [ApiKey]
+ 
     [ApiController]
     [Route("api/[controller]")]
     public class WeatherForecastController : ControllerBase
